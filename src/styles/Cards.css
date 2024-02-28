@@ -1,0 +1,35 @@
+.cards {
+  display: flex;
+  gap: 2rem;
+  min-height: 70vh;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+}
+
+.card {
+  background-color: red;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+
+  font-size: 5rem;
+  font-weight: bolder;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.score {
+  font-size: 2rem;
+  text-align: right;
+}
