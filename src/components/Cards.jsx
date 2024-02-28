@@ -36,7 +36,7 @@ function Cards() {
       </div>
       <div className='cards'>
         {data.map((i) => {
-          return <Card key={i} name={i} />;
+          return <Card handleClick={handleClick} key={i} name={i} />;
         })}
       </div>
     </>

@@ -1,6 +1,6 @@
-function Card({ name }) {
+function Card({ name, handleClick }) {
   return (
-    <div className='card'>
+    <div onClick={handleClick} className='card'>
       <p>{name.toString()}</p>
     </div>
   );
