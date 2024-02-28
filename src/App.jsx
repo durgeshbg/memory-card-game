@@ -1,7 +1,9 @@
+import Cards from './components/Cards';
+
 function App() {
   return (
     <>
-      <h1>Testing</h1>
+      <Cards />
     </>
   );
 }
