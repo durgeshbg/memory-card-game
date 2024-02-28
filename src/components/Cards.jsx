@@ -9,6 +9,9 @@ function Cards() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
+  // Shuffle array
+  data.sort(() => Math.random() - 0.5);
+
   // Updating best score
   if (score > bestScore) setBestScore(score);
 
