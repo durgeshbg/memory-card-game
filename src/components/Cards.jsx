@@ -3,7 +3,7 @@ import Card from './Card';
 import '../styles/Cards.css';
 
 function Cards() {
-  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const data = [232, 56, 324, 893, 23, 455, 321, 890, 789, 999, 673, 555];
   const [consecSelect, setConsecSelect] = useState([]);
 
   // Score State
@@ -32,14 +32,16 @@ function Cards() {
 
   return (
     <>
-      <div className='score'>
-        Score:{score} Best score:{bestScore}
-      </div>
-      <div className='cards'>
-        {data.map((i) => {
-          return <Card handleClick={handleClick} key={i} name={i} />;
-        })}
-      </div>
+      <main>
+        <div className='score'>
+          Score:{score} Best score:{bestScore}
+        </div>
+        <div className='cards'>
+          {data.map((i) => {
+            return <Card handleClick={handleClick} key={i} name={i} />;
+          })}
+        </div>
+      </main>
     </>
   );
 }

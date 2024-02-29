@@ -1,7 +1,14 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .cards {
   display: flex;
   gap: 2rem;
   min-height: 70vh;
+  max-width: 90vw;
   flex-wrap: wrap;
   padding: 1rem;
   justify-content: space-between;
@@ -31,5 +38,6 @@
 
 .score {
   font-size: 2rem;
-  text-align: right;
+  align-self: flex-end;
+  margin-right: 5rem;
 }
