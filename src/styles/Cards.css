@@ -61,3 +61,43 @@ main {
   align-self: flex-end;
   margin-right: 5rem;
 }
+
+@media (max-width: 1250px) {
+  .card {
+    width: 130px;
+    height: 180px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1090px) {
+  .score {
+    align-self: center;
+    font-size: 1.8rem;
+  }
+  .card {
+    width: 100px;
+    height: 140px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .score {
+    align-self: flex-end;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 610px) {
+  .score {
+    align-self: center;
+    margin-top: 10px;
+    margin-left: 80px;
+  }
+  .card {
+    width: 80px;
+    height: 100px;
+    font-size: 11px;
+  }
+}

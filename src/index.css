@@ -7,4 +7,24 @@ h1 {
   text-align: center;
   color: red;
   font-size: 4rem;
+  font-weight: bolder;
+}
+@media (max-width: 1090px) {
+  h1 {
+    text-align: left;
+    font-size: 3rem;
+    margin: 10px 0px 0px 30px;
+  }
+}
+
+@media (max-width: 840px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 610px) {
+  h1 {
+    text-align: center;
+  }
 }
