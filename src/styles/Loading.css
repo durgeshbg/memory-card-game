@@ -1,0 +1,10 @@
+.loading {
+  display: flex;
+  height: 10rem;
+  width: 100%;
+  justify-content: center;
+}
+
+svg {
+  fill: blue;
+}
