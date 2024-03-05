@@ -45,7 +45,12 @@ function Cards() {
     <>
       <main>
         <div className='score'>
-          Score:{score} Best score:{bestScore}
+          <div>
+            Score:<p>{score}</p>
+          </div>{' '}
+          <div>
+            Best score:<p>{bestScore}</p>
+          </div>
         </div>
         {!level ? (
           <Level setLevel={setLevel} />

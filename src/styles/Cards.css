@@ -60,6 +60,22 @@ main {
   font-size: 2rem;
   align-self: flex-end;
   margin-right: 5rem;
+  width: max-content;
+}
+.score div {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.score div p {
+  color: red;
+  font-weight: bolder;
+  background-color: black;
+  width: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 1250px) {
@@ -74,6 +90,8 @@ main {
   .score {
     align-self: center;
     font-size: 1.8rem;
+    display: flex;
+    gap: 20px;
   }
   .card {
     width: 100px;
