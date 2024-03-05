@@ -8,7 +8,7 @@ main {
   display: flex;
   gap: 2rem;
   min-height: 70vh;
-  max-width: 90vw;
+  min-width: 90vw;
   flex-wrap: wrap;
   padding: 1rem;
   justify-content: space-between;
@@ -20,16 +20,30 @@ main {
   background-color: red;
   width: 200px;
   height: 300px;
+  padding: 5px;
   border-radius: 10px;
 
-  font-size: 5rem;
   font-weight: bolder;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.card .image {
+  width: 90%;
+  height: 70%;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(1);
-  transition: transform 0.4s ease-in-out;
+}
+.card img {
+  width: 100%;
 }
 
 .card:hover {

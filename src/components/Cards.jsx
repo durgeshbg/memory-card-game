@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Card from './Card';
 import '../styles/Cards.css';
+import Loading from './Loading';
 
 function Cards() {
   const [data, setData] = useState({});
@@ -44,9 +45,13 @@ function Cards() {
           Score:{score} Best score:{bestScore}
         </div>
         <div className='cards'>
-          {Object.keys(temp).map((name) => (
-            <Card handleClick={handleClick} url={data[name]} key={name} name={name} />
-          ))}
+          {Object.keys(temp).length < 12 ? (
+            <Loading />
+          ) : (
+            Object.keys(temp).map((name) => (
+              <Card handleClick={handleClick} url={data[name]} key={name} name={name} />
+            ))
+          )}
         </div>
       </main>
     </>
