@@ -1,7 +1,8 @@
-function Card({ name, handleClick }) {
+function Card({ name, handleClick, url }) {
   return (
-    <div onClick={handleClick} className='card'>
-      <p>{name.toString()}</p>
+    <div className={name + ' card'} onClick={handleClick}>
+      <img className={name + ' image'} src={url} alt={name} />
+      <div className={name + ' name'}>{name.toUpperCase()}</div>
     </div>
   );
 }

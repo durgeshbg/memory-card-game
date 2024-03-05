@@ -1,26 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Card from './Card';
 import '../styles/Cards.css';
 
 function Cards() {
-  const data = [232, 56, 324, 893, 23, 455, 321, 890, 789, 999, 673, 555];
+  const [data, setData] = useState({});
   const [consecSelect, setConsecSelect] = useState([]);
 
   // Score State
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
-  // Shuffle array
-  data.sort(() => Math.random() - 0.5);
-
-  // Updating best score
-  if (score > bestScore) setBestScore(score);
+  // Fetch images
+  useEffect(() => {
+    if (Object.keys(data).length >= 12) return;
+    const i = Math.floor(Math.random() * 1000);
+    fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+      .then((raw) => raw.json())
+      .then((res) => {
+        setData({ ...data, [res.name]: res.sprites.front_default });
+      });
+  }, [data]);
 
   // Update score
   const handleClick = (e) => {
-    const value = e.target.children.length
-      ? e.target.children[0].textContent
-      : e.target.textContent;
+    const value = e.target.classList[0];
     if (consecSelect.includes(value)) {
       setScore(0);
       setConsecSelect([]);
@@ -29,6 +32,10 @@ function Cards() {
       setConsecSelect([...consecSelect, value]);
     }
   };
+  if (score > bestScore) setBestScore(score);
+
+  // Shuffle object
+  const temp = Object.fromEntries(Object.entries(data).sort(() => Math.random() - 0.5));
 
   return (
     <>
@@ -37,9 +44,9 @@ function Cards() {
           Score:{score} Best score:{bestScore}
         </div>
         <div className='cards'>
-          {data.map((i) => {
-            return <Card handleClick={handleClick} key={i} name={i} />;
-          })}
+          {Object.keys(temp).map((name) => (
+            <Card handleClick={handleClick} url={data[name]} key={name} name={name} />
+          ))}
         </div>
       </main>
     </>
