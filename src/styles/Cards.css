@@ -65,17 +65,19 @@ main {
 .score div {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   gap: 5px;
-  margin-bottom: 10px;
 }
 .score div p {
-  color: red;
+  background-color: red;
   font-weight: bolder;
-  background-color: black;
+  color: white;
   width: 30px;
   border-radius: 5px;
+  padding: 3px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1250px) {

@@ -18,6 +18,7 @@
   font-size: 2rem;
   font-weight: bolder;
   transition: transform 0.3s ease-in-out;
+  color: white;
 }
 .level:hover {
   transform: scale(1.1);
