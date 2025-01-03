@@ -23,7 +23,7 @@ function Cards() {
       .then((res) => {
         setData({ ...data, [res.name]: res.sprites.front_default });
       });
-  }, [data, level]);
+  }, [data, level, n]);
 
   // Update score
   const handleClick = (e) => {
